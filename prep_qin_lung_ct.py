@@ -26,8 +26,8 @@ def save_dataset(args):
                 # print(np.max(f), '\n', np.min(f))
                 # f = util.random_noise(f, mode='gaussian', var=0.0006)
                 mean = 0
-                sigma = 75
-                noise = np.random.normal(mean, sigma/4096.0, f.shape)
+                sigma = 
+                noise = np.random.normal(mean, sigma/255, f.shape)
                 f_noise = f + noise
                 f_noise = np.clip(f_noise, 0.0, 1.0)
                 f_name = '{}_{}_{}.npy'.format(patient, pi, io)
@@ -99,7 +99,7 @@ def printProgressBar(iteration, total, prefix='', suffix='', decimals=1, length=
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--data_path', type=str, default='E:/Dataset-QIN-LUNG-CT') # E:/AAPM-Mayo-CT-Challenge/1mm B30
+    parser.add_argument('--data_path', type=str, default='E:/Dataset-QIN-LUNG-CT') 
     parser.add_argument('--save_path', type=str, default='./npy_qin_lung_ct/')
 
     parser.add_argument('--test_patient', type=str, default='001')
